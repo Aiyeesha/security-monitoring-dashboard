@@ -1,0 +1,109 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.app-header h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+
+.live-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+.live-badge.on  { background: #052e16; color: #4ade80; border: 1px solid #166534; }
+.live-badge.off { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
+
+.dashboard { padding: 1.5rem 2rem; }
+
+.metrics-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-card {
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border-top: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-value { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+.metric-label { font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.alert-section { background: #1e293b; border-radius: 8px; overflow: hidden; }
+
+.alert-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.alert-section-header h2 { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.alert-count {
+  background: #334155;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #162032;
+  font-weight: 500;
+}
+td { padding: 0.75rem 1rem; border-bottom: 1px solid #1e293b; vertical-align: top; }
+tr:hover td { background: #162032; }
+
+.sev-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.event-title { font-weight: 600; }
+.event-desc { font-size: 0.78rem; color: #64748b; margin-top: 0.25rem; line-height: 1.4; }
+
+.status-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+.status-pill.open         { background: #450a0a; color: #f87171; }
+.status-pill.investigating { background: #422006; color: #fb923c; }
+.status-pill.resolved      { background: #052e16; color: #4ade80; }
